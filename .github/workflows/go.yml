@@ -31,4 +31,7 @@ jobs:
         fi
 
     - name: Build
-      run: go build -v cmd
+      run: go build -v cmd -o build/fq
+
+    - name: Commit
+      run: git add .; git commit -m "Build executable"
