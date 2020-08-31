@@ -33,5 +33,11 @@ jobs:
     - name: Build linux
       run: CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo cmd
 
-    - name: Commit
-      run: git add .; git commit -m "Build executable"
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Build release" -a
+
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
