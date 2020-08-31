@@ -30,8 +30,8 @@ jobs:
             dep ensure
         fi
 
-    - name: Build
-      run: go build -v cmd -o build/fq
+    - name: Build linux
+      run: RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /build/linux/fq ./cmd
 
     - name: Commit
       run: git add .; git commit -m "Build executable"
