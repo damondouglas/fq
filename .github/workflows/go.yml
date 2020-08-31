@@ -33,6 +33,10 @@ jobs:
     - name: Build linux
       run: CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o build/linux/fq cmd/main.go
 
+    - name: chmod
+      run: |
+        chmod +x build/linux/fq
+
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
