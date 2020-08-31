@@ -31,7 +31,7 @@ jobs:
         fi
 
     - name: Build linux
-      run: CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /build/linux/fq ./cmd
+      run: CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o build/linux/fq cmd
 
     - name: Commit
       run: git add .; git commit -m "Build executable"
