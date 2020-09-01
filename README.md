@@ -2,6 +2,12 @@
 
 `fq` is a commandline utility for managing firestore instances.
 
+# Install
+
+```
+$ go install github.com/damondouglas/fq
+```
+
 # Usage
 
 ```
