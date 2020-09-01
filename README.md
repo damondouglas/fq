@@ -43,3 +43,17 @@ OPTIONS:
    --help, -h       show help (default: false)
 
 ```
+
+## cat
+
+```
+NAME:
+   fq cat - Read contents of document
+
+USAGE:
+   fq cat [command options] PATH
+
+OPTIONS:
+   --help, -h  show help (default: false)
+
+```
