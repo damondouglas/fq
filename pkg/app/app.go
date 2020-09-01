@@ -1,6 +1,7 @@
 package app
 
 import (
+	"github.com/damondouglas/fq/pkg/cat"
 	"github.com/damondouglas/fq/pkg/flag"
 	"github.com/damondouglas/fq/pkg/ls"
 	"github.com/damondouglas/fq/pkg/out"
@@ -19,6 +20,7 @@ var (
 		},
 		Commands: []*cli.Command{
 			ls.Command,
+			cat.Command,
 		},
 	}
 )
